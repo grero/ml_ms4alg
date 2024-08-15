@@ -60,7 +60,7 @@ def sort(*,
     
     # Read the geometry file
     if geom:
-        Geom = np.genfromtxt(geom, delimiter=',')
+        Geom = np.atleast_2d(np.genfromtxt(geom, delimiter=','))
     else:
         Geom = np.zeros((M,2))
         
